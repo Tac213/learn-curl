@@ -15,10 +15,11 @@ option(BUILD_TESTING "" OFF)
 if(WIN32)
     option(CURL_USE_SCHANNEL "" ON)
     option(CURL_USE_LIBPSL "" OFF)
+    option(USE_WIN32_IDN "" ON)
 endif()
 
 if(APPLE)
-    option(USE_APPLE_IDN "Use Apple built-in IDN support" ON)
+    option(USE_APPLE_IDN "" ON)
 endif()
 
 add_subdirectory(thirdparty/curl)
