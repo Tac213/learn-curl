@@ -11,6 +11,12 @@ option(BUILD_MISC_DOCS "" OFF)
 option(ENABLE_CURL_MANUAL "" OFF)
 option(BUILD_EXAMPLES "" OFF)
 option(BUILD_TESTING "" OFF)
+
+if(WIN32)
+    option(CURL_USE_SCHANNEL "" ON)
+    option(CURL_USE_LIBPSL "" OFF)
+endif()
+
 add_subdirectory(thirdparty/curl)
 
 add_subdirectory(examples)
