@@ -17,6 +17,10 @@ if(WIN32)
     option(CURL_USE_LIBPSL "" OFF)
 endif()
 
+if(APPLE)
+    option(USE_APPLE_IDN "Use Apple built-in IDN support" ON)
+endif()
+
 add_subdirectory(thirdparty/curl)
 
 add_subdirectory(examples)
