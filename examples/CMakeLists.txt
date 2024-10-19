@@ -3,4 +3,5 @@ macro(add_example _example_name)
     target_link_libraries(${_example_name} PRIVATE libcurl_static)
 endmacro()
 
+add_example(downloadpython313)
 add_example(url2file)
